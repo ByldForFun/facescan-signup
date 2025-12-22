@@ -43,49 +43,20 @@ body {
     animation: fadeInDown 0.8s ease-out;
 }
 
-.scan-icon {
+.app-logo {
     width: 180px;
     height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(155, 135, 245, 0.3));
+    animation: float 3s ease-in-out infinite;
 }
 
-.face-scan-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.scan-circle-outer {
-    fill: none;
-    stroke: #9b87f5;
-    stroke-width: 2;
-    stroke-dasharray: 8 8;
-    opacity: 0.6;
-    animation: rotate 20s linear infinite;
-    transform-origin: center;
-}
-
-.scan-circle-inner {
-    fill: none;
-    stroke: #2d3346;
-    stroke-width: 2;
-}
-
-.corner {
-    fill: none;
-    stroke: #9b87f5;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-10px);
     }
 }
 
@@ -334,7 +305,7 @@ input[type="email"]:invalid:not(:placeholder-shown) {
         margin-bottom: 2rem;
     }
     
-    .scan-icon {
+    .app-logo {
         width: 150px;
         height: 150px;
     }
