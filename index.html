@@ -11,7 +11,19 @@
         <div class="content">
             <!-- Logo/Icon -->
             <div class="icon-container">
-                <img src="App Icon.png" alt="FaceScan Logo" class="app-logo">
+                <div class="scan-icon">
+                    <svg viewBox="0 0 100 100" class="face-scan-svg">
+                        <!-- Face scan icon -->
+                        <circle cx="50" cy="50" r="45" class="scan-circle-outer" />
+                        <circle cx="50" cy="50" r="35" class="scan-circle-inner" />
+                        <!-- Corner brackets -->
+                        <path d="M 25 25 L 25 35 M 25 25 L 35 25" class="corner top-left" />
+                        <path d="M 75 25 L 75 35 M 75 25 L 65 25" class="corner top-right" />
+                        <path d="M 25 75 L 25 65 M 25 75 L 35 75" class="corner bottom-left" />
+                        <path d="M 75 75 L 75 65 M 75 75 L 65 75" class="corner bottom-right" />
+                    </svg>
+                    <img src="App Icon.png" alt="FaceScan Logo" class="app-logo">
+                </div>
             </div>
 
             <!-- Heading -->
