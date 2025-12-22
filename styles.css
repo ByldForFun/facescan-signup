@@ -43,58 +43,88 @@ body {
     animation: fadeInDown 0.8s ease-out;
 }
 
-.scan-icon {
-    width: 180px;
-    height: 180px;
+.scan-frame {
+    width: 300px;
+    height: 300px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
-.face-scan-svg {
-    width: 100%;
-    height: 100%;
+.scan-svg {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.scan-circle-outer {
+.scan-circle-solid {
+    fill: none;
+    stroke: rgba(45, 51, 70, 0.8);
+    stroke-width: 2;
+}
+
+.scan-circle-dashed {
     fill: none;
     stroke: #9b87f5;
-    stroke-width: 2;
-    stroke-dasharray: 8 8;
-    opacity: 0.6;
+    stroke-width: 3;
+    stroke-dasharray: 12 8;
+    opacity: 0.7;
     animation: rotate 20s linear infinite;
     transform-origin: center;
 }
 
-.scan-circle-inner {
-    fill: none;
-    stroke: #2d3346;
-    stroke-width: 2;
+/* Corner brackets */
+.corner-bracket {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #9b87f5;
+    border-radius: 8px;
 }
 
-.corner {
-    fill: none;
-    stroke: #9b87f5;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.corner-bracket.top-left {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
 }
 
+.corner-bracket.top-right {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bracket.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-bracket.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* Logo in center */
 .app-logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     position: relative;
-    z-index: 1;
-    border-radius: 24px;
-    opacity: 0.85;
+    z-index: 2;
+    border-radius: 28px;
+    opacity: 0.9;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0.4) 100%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0.4) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.3) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.3) 100%);
 }
 
 .app-logo:hover {
@@ -356,14 +386,19 @@ input[type="email"]:invalid:not(:placeholder-shown) {
         margin-bottom: 2rem;
     }
     
-    .scan-icon {
-        width: 150px;
-        height: 150px;
+    .scan-frame {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .corner-bracket {
+        width: 40px;
+        height: 40px;
     }
     
     .app-logo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     
     .container {
