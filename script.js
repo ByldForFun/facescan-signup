@@ -47,7 +47,7 @@ form.addEventListener('submit', async (e) => {
 // Submit email to Google Sheets
 async function submitToGoogleSheets(email) {
     // If no Google Script URL is configured, use local storage as fallback
-    if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwuvkye-MAC5IF4ZkYfLgXUNbqVANwa7bfZ1JW-DVLKbl3C162Qyj1hYBIZRY9jpebR/exec') {
+    if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
         console.warn('Google Script URL not configured. Using localStorage as fallback.');
         saveToLocalStorage(email);
         // Simulate network delay
@@ -55,13 +55,15 @@ async function submitToGoogleSheets(email) {
         return;
     }
     
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('timestamp', new Date().toISOString());
+    // Send data as URL parameters for better compatibility with Google Apps Script
+    const params = new URLSearchParams({
+        email: email,
+        timestamp: new Date().toISOString()
+    });
     
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    const response = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
         method: 'POST',
-        body: formData
+        redirect: 'follow'
     });
     
     if (!response.ok) {
