@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceScan - Join the Waitlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- Logo/Icon -->
+            <div class="icon-container">
+                <div class="scan-icon">
+                    <svg viewBox="0 0 100 100" class="face-scan-svg">
+                        <!-- Face scan icon -->
+                        <circle cx="50" cy="50" r="45" class="scan-circle-outer" />
+                        <circle cx="50" cy="50" r="35" class="scan-circle-inner" />
+                        <!-- Corner brackets -->
+                        <path d="M 25 25 L 25 35 M 25 25 L 35 25" class="corner top-left" />
+                        <path d="M 75 25 L 75 35 M 75 25 L 65 25" class="corner top-right" />
+                        <path d="M 25 75 L 25 65 M 25 75 L 35 75" class="corner bottom-left" />
+                        <path d="M 75 75 L 75 65 M 75 75 L 65 75" class="corner bottom-right" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="main-heading">Coming Soon</h1>
+            <p class="subheading">Take a scan to view your health metrics.</p>
+            <p class="description">Be the first to know when FaceScan launches. Sign up for early access and notifications.</p>
+
+            <!-- Email Form -->
+            <form id="signupForm" class="signup-form">
+                <div class="input-group">
+                    <input 
+                        type="email" 
+                        id="emailInput" 
+                        placeholder="Enter your email address" 
+                        required
+                        autocomplete="email"
+                    />
+                </div>
+                <button type="submit" class="btn-primary" id="submitBtn">
+                    <span class="btn-text">Join Waitlist</span>
+                    <span class="btn-loading" style="display: none;">
+                        <span class="spinner"></span>
+                    </span>
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <p>Thank you for joining! We'll notify you when we launch.</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <p>Oops! Something went wrong. Please try again.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 FaceScan. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
