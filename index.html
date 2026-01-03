@@ -7,69 +7,177 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="images/App Icon.png" alt="FaceScan Icon" class="logo-icon">
+                <div class="logo">FaceScan</div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="about">About</a>
+                <a href="#" class="nav-link" data-page="features">Features</a>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <div class="content">
-            <!-- Logo/Icon -->
-            <div class="icon-container">
-                <div class="scan-frame">
-                    <!-- Scanning circles -->
-                    <svg class="scan-svg" viewBox="0 0 300 300">
-                        <!-- Inner solid circle -->
-                        <circle cx="150" cy="150" r="110" class="scan-circle-solid" />
-                        <!-- Rotating dashed circle -->
-                        <circle cx="150" cy="150" r="130" class="scan-circle-dashed" />
-                    </svg>
-
-                    
-                    <!-- Logo in center -->
-                    <img src="App Icon.png" alt="FaceScan Logo" class="app-logo">
+        <!-- Home Page -->
+        <div class="page-content active" id="home-page">
+            <div class="main-layout">
+                <!-- Left Side - Phone Screenshots -->
+                <div class="phones-section">
+                    <div class="phones-container">
+                        <img src="images/JD6.8-portrait.png" alt="Before - Wellness Score 6.8" class="phone-left">
+                        <img src="images/JD8.2-portrait.png" alt="After - Wellness Score 8.2" class="phone-right">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Heading -->
-            <h1 class="main-heading">Coming Soon</h1>
-            <p class="subheading">Take a scan to view your health metrics.</p>
-            <p class="description">Be the first to know when FaceScan launches. Sign up for early access and notifications.</p>
+                <!-- Right Side - Content -->
+                <div class="content-section">
+                    <!-- Heading -->
+                    <h1 class="main-heading">Coming Soon</h1>
+                    <p class="subheading">Take a scan to view your health metrics.</p>
+                    <p class="description">Be the first to know when FaceScan launches. Sign up for early access and notifications.</p>
 
-            <!-- Email Form -->
-            <form id="signupForm" class="signup-form">
-                <div class="input-group">
-                    <input 
-                        type="email" 
-                        id="emailInput" 
-                        placeholder="Enter your email address" 
-                        required
-                        autocomplete="email"
-                    />
+                    <!-- Improvement Message -->
+                    <div class="improvement-message">
+                        <div class="improvement-icon">⚡</div>
+                        <h3 class="improvement-title">See Results in Just Days</h3>
+                        <p class="improvement-text">Track your wellness journey and watch your scores improve with consistent healthy habits.</p>
+                        <div class="improvement-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">+20.6%</span>
+                                <span class="stat-desc">Improvement</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">2 Days</span>
+                                <span class="stat-desc">Time Period</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Form -->
+                    <form id="signupForm" class="signup-form">
+                        <div class="input-group">
+                            <input 
+                                type="email" 
+                                id="emailInput" 
+                                placeholder="Enter your email address" 
+                                required
+                                autocomplete="email"
+                            />
+                            <button type="submit" class="btn-primary" id="submitBtn">
+                                <span class="btn-text">Subscribe now</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <span class="spinner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Trusted By Count -->
+                    <div class="trusted-by">
+                        <div class="avatars">
+                            <span class="avatar">👤</span>
+                            <span class="avatar">👤</span>
+                            <span class="avatar">👤</span>
+                        </div>
+                        <p class="trusted-text">Trusted by <strong>1,000+</strong> early adopters</p>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <svg class="checkmark" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <p>Thank you for joining! We'll notify you when we launch.</p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <p>Oops! Something went wrong. Please try again.</p>
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary" id="submitBtn">
-                    <span class="btn-text">Join Waitlist</span>
-                    <span class="btn-loading" style="display: none;">
-                        <span class="spinner"></span>
-                    </span>
-                </button>
-            </form>
-
-            <!-- Success Message -->
-            <div id="successMessage" class="success-message" style="display: none;">
-                <svg class="checkmark" viewBox="0 0 52 52">
-                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                </svg>
-                <p>Thank you for joining! We'll notify you when we launch.</p>
-            </div>
-
-            <!-- Error Message -->
-            <div id="errorMessage" class="error-message" style="display: none;">
-                <p>Oops! Something went wrong. Please try again.</p>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 FaceScan. All rights reserved.</p>
-        </footer>
+        <!-- About Page -->
+        <div class="page-content" id="about-page">
+            <div class="main-layout">
+                <!-- Left Side - Phone Screenshots -->
+                <div class="phones-section">
+                    <div class="phones-container">
+                        <img src="images/JD6.8-portrait.png" alt="Before - Wellness Score 6.8" class="phone-left">
+                        <img src="images/JD8.2-portrait.png" alt="After - Wellness Score 8.2" class="phone-right">
+                    </div>
+                </div>
+
+                <!-- Right Side - About Content -->
+                <div class="content-section">
+                    <h1 class="main-heading">About FaceScan</h1>
+                    <div class="about-text">
+                        <p>FaceScan uses advanced AI technology to analyze your facial features and provide instant wellness insights. Our proprietary algorithm evaluates multiple health markers including recovery, circulation, nutrient balance, hydration, and metabolic resilience.</p>
+                        <p>With just a simple scan, you can track your wellness journey over time and see measurable improvements in your health metrics. Join thousands of users who are taking control of their wellness with data-driven insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Page -->
+        <div class="page-content" id="features-page">
+            <div class="features-layout">
+                <h1 class="page-heading">Comprehensive Health Categories</h1>
+                <p class="page-intro">Track every aspect of your wellness with detailed metrics across five key health systems</p>
+                
+                <div class="features-showcase">
+                    <div class="feature-phone">
+                        <img src="images/JD6.8-details-portrait.png" alt="Wellness Categories Before" class="feature-image">
+                        <div class="feature-label">
+                            <span class="badge-before">Before</span>
+                            <span class="feature-caption">Initial Assessment</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-description">
+                        <h3>Five Wellness Systems</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <strong>Recovery</strong> - Sleep quality and fatigue indicators
+                            </li>
+                            <li>
+                                <strong>Nutrient Glow</strong> - Dietary markers and skin vitality
+                            </li>
+                            <li>
+                                <strong>Circulation</strong> - Oxygenation and blood flow metrics
+                            </li>
+                            <li>
+                                <strong>Balance</strong> - Hydration levels and barrier health
+                            </li>
+                            <li>
+                                <strong>Resilience</strong> - Metabolic and inflammatory markers
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-phone">
+                        <img src="images/JD8.2-details-portrait.png" alt="Wellness Categories After" class="feature-image">
+                        <div class="feature-label">
+                            <span class="badge-after">After</span>
+                            <span class="feature-caption">Improved Results</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 FaceScan. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

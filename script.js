@@ -142,3 +142,27 @@ emailInput.addEventListener('input', () => {
     emailInput.style.borderColor = '';
 });
 
+// Page navigation functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page-content');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageName = link.getAttribute('data-page');
+            
+            // Remove active class from all links and pages
+            navLinks.forEach(l => l.classList.remove('active'));
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Add active class to clicked link and corresponding page
+            link.classList.add('active');
+            document.getElementById(`${pageName}-page`).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+});
+
