@@ -1,0 +1,16 @@
+{
+  "name": "facescan-signup",
+  "version": "1.0.0",
+  "description": "FaceScan signup page with security enhancements",
+  "scripts": {
+    "build": "npm run minify-js && npm run minify-css",
+    "minify-js": "terser script.js -c -m -o script.min.js",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "terser": "^5.16.0",
+    "clean-css-cli": "^5.6.2"
+  }
+}
+

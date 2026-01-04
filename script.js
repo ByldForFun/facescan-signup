@@ -1,5 +1,7 @@
-// Configuration - Replace with your Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuvkye-MAC5IF4ZkYfLgXUNbqVANwa7bfZ1JW-DVLKbl3C162Qyj1hYBIZRY9jpebR/exec';
+// Configuration - Load from config.js
+const GOOGLE_SCRIPT_URL = (typeof window !== 'undefined' && window.FACESCAN_CONFIG) 
+    ? window.FACESCAN_CONFIG.GOOGLE_SCRIPT_URL 
+    : 'https://script.google.com/macros/s/AKfycbwuvkye-MAC5IF4ZkYfLgXUNbqVANwa7bfZ1JW-DVLKbl3C162Qyj1hYBIZRY9jpebR/exec';
 
 // DOM Elements
 const form = document.getElementById('signupForm');
