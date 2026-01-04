@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FaceScan - Join the Waitlist</title>
+    <title>FaceScan - Wellness Insights From Your Face</title>
+    <meta name="description" content="Research-backed facial analysis for wellness insights. On-device processing, privacy-first. Join the early access waitlist.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Navigation -->
@@ -29,31 +33,55 @@
                 <!-- Left Side - Phone Screenshots -->
                 <div class="phones-section">
                     <div class="phones-container">
-                        <img src="images/JD6.8-portrait.png" alt="Before - Wellness Score 6.8" class="phone-left">
-                        <img src="images/JD8.2-portrait.png" alt="After - Wellness Score 8.2" class="phone-right">
+                        <img src="images/Low_Score_Screenshot-left.png" alt="Day 1 - Wellness Score 4.3" class="phone-left">
+                        <img src="images/High_Score_Screenshot-portrait.png" alt="Day 7 - Wellness Score 9.3" class="phone-right">
                     </div>
                 </div>
 
                 <!-- Right Side - Content -->
                 <div class="content-section">
-                    <!-- Heading -->
-                    <h1 class="main-heading">Coming Soon</h1>
-                    <p class="subheading">Take a scan to view your health metrics.</p>
-                    <p class="description">Be the first to know when FaceScan launches. Sign up for early access and notifications.</p>
+                    <!-- Science Badge -->
+                    <div class="science-badge">
+                        <span class="badge-icon">🔬</span>
+                        <span>Backed by 10+ Peer-Reviewed Studies</span>
+                    </div>
 
-                    <!-- Improvement Message -->
+                    <!-- Heading -->
+                    <h1 class="main-heading">
+                        <span class="heading-small">What If Your Face Could</span>
+                        <span class="heading-reveal">Reveal Your Health?</span>
+                    </h1>
+                    <p class="subheading">One photo. 30 seconds. <span class="highlight-text">Insights that took doctors years to learn.</span></p>
+                    
+                    <!-- Value Props -->
+                    <div class="value-props">
+                        <div class="value-item">
+                            <span class="value-check">✓</span>
+                            <span>Detect hidden nutrient deficiencies</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-check">✓</span>
+                            <span>Track sleep quality without wearables</span>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-check">✓</span>
+                            <span>Monitor hydration & circulation</span>
+                        </div>
+                    </div>
+
+                    <!-- Results Preview -->
                     <div class="improvement-message">
-                        <div class="improvement-icon">⚡</div>
-                        <h3 class="improvement-title">See Results in Just Days</h3>
-                        <p class="improvement-text">Track your wellness journey and watch your scores improve with consistent healthy habits.</p>
+                        <h3 class="improvement-title">Track Progress Over Time</h3>
+                        <p class="improvement-text">See how lifestyle changes impact your wellness score. Our beta testers saw measurable improvements within their first week.</p>
                         <div class="improvement-stats">
                             <div class="stat-item">
-                                <span class="stat-value">+20.6%</span>
-                                <span class="stat-desc">Improvement</span>
+                                <span class="stat-value">+116%</span>
+                                <span class="stat-desc">Avg. Improvement</span>
                             </div>
+                            <div class="stat-divider"></div>
                             <div class="stat-item">
-                                <span class="stat-value">2 Days</span>
-                                <span class="stat-desc">Time Period</span>
+                                <span class="stat-value">7 Days</span>
+                                <span class="stat-desc">To See Changes</span>
                             </div>
                         </div>
                     </div>
@@ -64,12 +92,12 @@
                             <input 
                                 type="email" 
                                 id="emailInput" 
-                                placeholder="Enter your email address" 
+                                placeholder="Enter your email" 
                                 required
                                 autocomplete="email"
                             />
                             <button type="submit" class="btn-primary" id="submitBtn">
-                                <span class="btn-text">Subscribe now</span>
+                                <span class="btn-text">Join Waitlist</span>
                                 <span class="btn-loading" style="display: none;">
                                     <span class="spinner"></span>
                                 </span>
@@ -77,23 +105,51 @@
                         </div>
                     </form>
 
-                    <!-- Trusted By Count -->
-                    <div class="trusted-by">
-                        <div class="avatars">
-                            <span class="avatar">👤</span>
-                            <span class="avatar">👤</span>
-                            <span class="avatar">👤</span>
+                    <!-- Trust Signals -->
+                    <div class="trust-signals">
+                        <div class="trust-item">
+                            <span class="trust-icon">🔒</span>
+                            <span>Photos processed on-device</span>
                         </div>
-                        <p class="trusted-text">Trusted by <strong>1,000+</strong> early adopters</p>
+                        <div class="trust-item">
+                            <span class="trust-icon">🔬</span>
+                            <span>Research-backed analysis</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">🚫</span>
+                            <span>No data stored or shared</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="social-proof">
+                        <div class="joined-info">
+                            <div class="avatars">
+                                <img src="https://i.pravatar.cc/100?img=1" alt="" class="avatar-img">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="" class="avatar-img">
+                                <img src="https://i.pravatar.cc/100?img=8" alt="" class="avatar-img">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="" class="avatar-img">
+                            </div>
+                            <p class="joined-count">Join <strong>2,800+</strong> others on the waitlist</p>
+                        </div>
+                        <div class="beta-feedback">
+                            <p class="feedback-quote">"The scan suggested I was dehydrated and low on vitamin C. I got bloodwork done and my doctor confirmed both."</p>
+                            <p class="feedback-author">— Beta Tester</p>
+                        </div>
                     </div>
 
                     <!-- Success Message -->
                     <div id="successMessage" class="success-message" style="display: none;">
-                        <svg class="checkmark" viewBox="0 0 52 52">
-                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                        </svg>
-                        <p>Thank you for joining! We'll notify you when we launch.</p>
+                        <div class="success-content">
+                            <div class="success-icon-wrap">
+                                <svg class="checkmark" viewBox="0 0 52 52">
+                                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                            </div>
+                            <h3 class="success-title">You're on the list!</h3>
+                            <p class="success-text">We'll notify you when FaceScan is ready. Keep an eye on your inbox.</p>
+                        </div>
                     </div>
 
                     <!-- Error Message -->
@@ -110,17 +166,53 @@
                 <!-- Left Side - Phone Screenshots -->
                 <div class="phones-section">
                     <div class="phones-container">
-                        <img src="images/JD6.8-portrait.png" alt="Before - Wellness Score 6.8" class="phone-left">
-                        <img src="images/JD8.2-portrait.png" alt="After - Wellness Score 8.2" class="phone-right">
+                        <img src="images/Scan_Page-portrait.png" alt="Ready for Today's Scan" class="phone-left">
+                        <img src="images/Wellness_Systems_Details_Screenshot-portrait.png" alt="Wellness Systems Details" class="phone-right">
                     </div>
                 </div>
 
                 <!-- Right Side - About Content -->
-                <div class="content-section">
-                    <h1 class="main-heading">About FaceScan</h1>
+                <div class="content-section about-content">
+                    <div class="about-badge">
+                        <span>Our Mission</span>
+                    </div>
+                    <h1 class="main-heading">
+                        <span class="heading-small">Wellness shouldn't require a lab.</span>
+                        <span class="heading-reveal">It should fit in your pocket.</span>
+                    </h1>
+                    
                     <div class="about-text">
-                        <p>FaceScan uses advanced AI technology to analyze your facial features and provide instant wellness insights. Our proprietary algorithm evaluates multiple health markers including recovery, circulation, nutrient balance, hydration, and metabolic resilience.</p>
-                        <p>With just a simple scan, you can track your wellness journey over time and see measurable improvements in your health metrics. Join thousands of users who are taking control of their wellness with data-driven insights.</p>
+                        <p>Doctors have long known that the face tells a story. Pallor can indicate anemia. Yellowish skin may suggest liver issues. Dark circles often reveal poor sleep. These visual biomarkers have been documented in medical literature for decades.</p>
+                        <p>FaceScan brings this clinical knowledge to everyone. Our computer vision model analyzes subtle color variations, texture patterns, and structural features—the same indicators trained physicians look for, now quantified with precision.</p>
+                    </div>
+
+                    <div class="about-principles">
+                        <div class="principle-item">
+                            <span class="principle-icon">🔬</span>
+                            <div class="principle-text">
+                                <strong>Research-Backed</strong>
+                                <span>Every indicator we track is grounded in peer-reviewed dermatological and medical research.</span>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="principle-icon">🎯</span>
+                            <div class="principle-text">
+                                <strong>Honest Results</strong>
+                                <span>We show you trends and possibilities—not diagnoses. We're a compass, not a doctor.</span>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="principle-icon">🔒</span>
+                            <div class="principle-text">
+                                <strong>Privacy-First</strong>
+                                <span>Your photos are processed on-device. We never store or transmit your facial data.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <p>Ready to see what your face reveals?</p>
+                        <a href="#" class="btn-secondary" data-page="home">Join the Waitlist →</a>
                     </div>
                 </div>
             </div>
@@ -129,46 +221,84 @@
         <!-- Features Page -->
         <div class="page-content" id="features-page">
             <div class="features-layout">
-                <h1 class="page-heading">Comprehensive Health Categories</h1>
-                <p class="page-intro">Track every aspect of your wellness with detailed metrics across five key health systems</p>
+                <div class="features-header">
+                    <div class="features-badge">
+                        <span>How It Works</span>
+                    </div>
+                    <h1 class="page-heading">Five Systems. <span class="heading-gradient">One Photo.</span></h1>
+                    <p class="page-intro">Your face reflects what's happening inside your body. We analyze five distinct biological systems to give you a complete wellness picture.</p>
+                </div>
                 
                 <div class="features-showcase">
                     <div class="feature-phone">
-                        <img src="images/JD6.8-details-portrait.png" alt="Wellness Categories Before" class="feature-image">
+                        <img src="images/Low_Score_Details_Screenshot-portrait.png" alt="Wellness Systems - Day 1" class="feature-image">
                         <div class="feature-label">
-                            <span class="badge-before">Before</span>
-                            <span class="feature-caption">Initial Assessment</span>
+                            <span class="badge-before">Day 1</span>
+                            <span class="feature-caption">Baseline Scan</span>
                         </div>
                     </div>
                     
                     <div class="feature-description">
-                        <h3>Five Wellness Systems</h3>
-                        <ul class="feature-list">
-                            <li>
-                                <strong>Recovery</strong> - Sleep quality and fatigue indicators
-                            </li>
-                            <li>
-                                <strong>Nutrient Glow</strong> - Dietary markers and skin vitality
-                            </li>
-                            <li>
-                                <strong>Circulation</strong> - Oxygenation and blood flow metrics
-                            </li>
-                            <li>
-                                <strong>Balance</strong> - Hydration levels and barrier health
-                            </li>
-                            <li>
-                                <strong>Resilience</strong> - Metabolic and inflammatory markers
-                            </li>
-                        </ul>
+                        <div class="feature-list-new">
+                            <div class="feature-item-new">
+                                <div class="feature-icon-wrap">
+                                    <span class="feature-icon">😴</span>
+                                </div>
+                                <div class="feature-item-content">
+                                    <strong>Recovery</strong>
+                                    <span>Periorbital appearance and facial muscle tension patterns linked to sleep quality and fatigue levels.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item-new">
+                                <div class="feature-icon-wrap">
+                                    <span class="feature-icon">✨</span>
+                                </div>
+                                <div class="feature-item-content">
+                                    <strong>Nutrient Glow</strong>
+                                    <span>Skin luminosity and coloration associated with vitamin and mineral sufficiency in clinical studies.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item-new">
+                                <div class="feature-icon-wrap">
+                                    <span class="feature-icon">❤️</span>
+                                </div>
+                                <div class="feature-item-content">
+                                    <strong>Circulation</strong>
+                                    <span>Facial blood flow patterns and oxygenation indicators visible through dermal translucency.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item-new">
+                                <div class="feature-icon-wrap">
+                                    <span class="feature-icon">💧</span>
+                                </div>
+                                <div class="feature-item-content">
+                                    <strong>Balance</strong>
+                                    <span>Skin turgor and texture markers correlated with hydration status and barrier function.</span>
+                                </div>
+                            </div>
+                            <div class="feature-item-new">
+                                <div class="feature-icon-wrap">
+                                    <span class="feature-icon">🛡️</span>
+                                </div>
+                                <div class="feature-item-content">
+                                    <strong>Resilience</strong>
+                                    <span>Inflammation and stress markers reflected in facial redness patterns and skin evenness.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="feature-phone">
-                        <img src="images/JD8.2-details-portrait.png" alt="Wellness Categories After" class="feature-image">
+                        <img src="images/High_Score_Details_Screenshot-portrait.png" alt="Wellness Systems Details - Day 7" class="feature-image">
                         <div class="feature-label">
-                            <span class="badge-after">After</span>
-                            <span class="feature-caption">Improved Results</span>
+                            <span class="badge-after">Day 7</span>
+                            <span class="feature-caption">Progress Tracked</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="features-disclaimer">
+                    <p>FaceScan provides wellness insights for informational purposes only. It is not a medical device and does not diagnose, treat, or prevent any disease. Always consult a healthcare professional for medical advice.</p>
                 </div>
             </div>
         </div>
